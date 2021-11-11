@@ -1,0 +1,142 @@
+.banar{
+    background-image: url("https://i.ibb.co/YkQv0vr/banar.jpg");
+    /* background-image: url("../../image/banar.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5% 40% 10% 10%;
+}
+.banar span {
+    color: yellow;
+    font-size: 72px;
+}
+.banar h1{
+    font-size: 60px;
+    font-weight: 900;
+    color: rgb(10, 10, 70);
+    padding-bottom: 20px;
+}
+.about{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding: 5px 15px;
+    background-color: rgb(10, 10, 70);
+    border-radius: 20px;
+}
+.doc-team{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.doc-team img{
+    width: 100%;
+}
+.information{
+    text-align: start;
+    padding: 10% 10% 3% 10%;
+}
+.info {
+    display: flex;
+}
+.information h1{
+    color: rgba(230, 59, 207, 0.856);
+    font-size: 20px;
+    font-weight: 600;
+}
+.information h2{
+    font-size: 32px;
+    font-weight: 800;
+}
+.information h3{
+    color: rgba(230, 59, 207, 0.856);
+    padding-right: 5%;
+}
+.information h4{
+    color: rgb(14, 14, 87);
+}
+.all-info{
+    padding-top: 3%;
+}
+.contact{
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 5px 15px;
+    background-color: rgb(10, 10, 70);
+    border-radius: 20px;
+}
+.services{
+    margin: 8% 0;
+}
+.services h1{
+    color: rgba(230, 59, 207, 0.856);
+    font-size: 20px;
+    font-weight: 600;
+}
+.services h2{
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(10, 10, 70);
+}
+.services p{
+    padding: 0 25%;
+    color: rgba(47, 47, 75, 0.712);
+}
+.name{
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(9, 9, 82);
+}
+.card{
+    
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(80, 148, 180, 0.685) ;
+}
+.card:hover{
+    background-color: rgba(111, 206, 250, 0.829);
+    cursor: zoom-out;
+}
+.review{
+    margin-bottom: 8%;
+}
+.review img{
+    width: 50%;
+    border-radius: 50%;
+}
+.review p{
+    color: gold;
+    padding: 2%;
+}
+.review h4{
+    padding: 0 20% 5% 20% ;
+}
+
+@media only screen and (max-width: 679px) {
+    .banar{
+        padding: 5% 35% 5% 5%;
+    }
+    .banar h1{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .banar span {
+        color: rgb(42, 162, 218);
+        font-size: 32px;
+    }  
+    .about{
+        font-size: 12px;
+    }
+    .doc-team{
+        display: block;
+    }
+    .services p{
+        padding: 10px;
+    }
+    .review h4{
+        padding: 0 5% 2% 5%;
+        font-size: 12px;
+    }
+}
