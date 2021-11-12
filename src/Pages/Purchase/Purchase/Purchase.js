@@ -86,7 +86,7 @@ const Purchase = ({ product }) => {
           ) : (
             <div className="login-form">
               <h1>Successfully Booked this plan !</h1>
-              <NavLink className="contact" to="/mybooking">
+              <NavLink className="contact" to="/dashboard/myorder">
               Your all Booked Plan <i class="fas fa-arrow-alt-circle-right"></i>
               </NavLink>
             </div>

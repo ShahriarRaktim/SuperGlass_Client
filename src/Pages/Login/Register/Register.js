@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
 const Register = () => {
+  const [loginData, setLoginData] = useState({});
+    const history = useHistory();
     const { googleSignIn, register, user, error } = useAuth();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const handleUserEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleUserPassword = (e) => {
-      setPassword(e.target.value);
-  };
+  const handleOnBlur = e => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+    console.log(newLoginData)
+}
 
   const handleCreateAccount = (e) => {
-    register(email, password);
+    register(loginData.email, loginData.password, loginData.name, history);
     e.preventDefault();
   };
 
@@ -32,16 +33,23 @@ const Register = () => {
             <form onSubmit={handleCreateAccount}>
               <div className="input">
                 <input
+                type="text"
+                name="name"
+                onBlur={handleOnBlur}
+                placeholder="Enter Your Name"
+              />
+              <br/>
+                <input
                   type="email"
-                  name=""
-                  onBlur={handleUserEmail}
+                  name="email"
+                  onBlur={handleOnBlur}
                   placeholder="Enter Your Email"
                 />
                 <br />
                 <input
                   type="password"
-                  name=""
-                  onBlur={handleUserPassword}
+                  name="password"
+                  onBlur={handleOnBlur}
                   placeholder="Enter Your Password"
                 />
               </div>

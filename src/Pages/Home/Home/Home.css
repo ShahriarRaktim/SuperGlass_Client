@@ -97,7 +97,12 @@
     box-shadow: 10px 10px 20px rgba(223, 74, 203, 0.705); ;
 }
 .card:hover{
-    background-color: rgba(230, 59, 207, 0.856);;
+    background-color: rgba(230, 59, 207, 0.856);
+    cursor: zoom-out;
+}
+.rating:hover{
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(255, 217, 0, 0.685);
     cursor: zoom-out;
 }
 .review{

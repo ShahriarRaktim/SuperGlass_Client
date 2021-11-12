@@ -4,40 +4,26 @@ import { NavLink, useHistory, useLocation } from "react-router-dom";
 import useAuth from '../../../Hooks/useAuth';
 import "./Login.css";
 const Login = () => {
-    const { googleSignIn, logIn, setIsloading } = useAuth();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+  const [loginData, setLoginData] = useState({});
+    const { googleSignIn, logIn, error } = useAuth();
     const location = useLocation();
     const history = useHistory();
-    const from = location.state?.from || "/home";
   
-    const handleUserEmail = (e) => {
-      setEmail(e.target.value);
-    };
-    const handleUserPassword = (e) => {
-      setPassword(e.target.value);
-    };
+    const handleOnChange = e => {
+      const field = e.target.name;
+      const value = e.target.value;
+      const newLoginData = { ...loginData };
+      newLoginData[field] = value;
+      setLoginData(newLoginData);
+  }
     
     const handleLogIn = (e) => {
-      logIn(email, password)
-        .then((userCredential) => {
-          history.push(from);
-        })
-        .catch((error) => {
-          setError(error.code);
-        })
-        .finally(() => setIsloading(false));
-  
-      e.preventDefault();
+      logIn(loginData.email, loginData.password, location, history);
+        e.preventDefault();
     };
   
     const loginwithGoogle = () => {
-      googleSignIn()
-        .then((result) => {
-          history.push(from);
-        })
-        .finally(() => setIsloading(false));
+      googleSignIn(location, history)
     };
     return (
       <div className="login">
@@ -55,17 +41,18 @@ const Login = () => {
           </h2>
           <form onSubmit={handleLogIn}>
             <div className="input">
+              
               <input
                 type="email"
-                name=""
-                onBlur={handleUserEmail}
+                name="email"
+                onBlur={handleOnChange}
                 placeholder="Enter Your Email"
               />
               <br />
               <input
                 type="password"
-                name=""
-                onBlur={handleUserPassword}
+                name="password"
+                onBlur={handleOnChange}
                 placeholder="Enter Your Password"
               />
             </div>
