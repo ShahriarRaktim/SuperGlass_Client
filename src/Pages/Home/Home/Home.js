@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
 import Banar from "../Banar/Banar";
 import HomeProducts from "../HomeProducts/HomeProducts";
@@ -8,6 +8,13 @@ import Reviews from "../Reviews/Reviews";
 import "./Home.css";
 
 const Home = () => {
+    const [products, setProducts]= useState([]);
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/products')
+        .then(res=>res.json())
+        .then(data => setProducts(data))
+    },[])
   return (
     <div>
       <Banar></Banar>
@@ -22,11 +29,11 @@ const Home = () => {
             been feeling to propel your career forward.
           </p>
         </div>
-        {/* <Row xs={1} md={2} lg={3} className="m-0 g-4">
-          {products.map((product) => (
+        <Row xs={1} md={2} lg={3} className="m-0 g-4">
+          {products.slice(0,6).map((product) => (
             <HomeProducts key={product.id} product={product}></HomeProducts>
           ))}
-        </Row> */}
+        </Row>
       </section>
       <Reason></Reason>
       <Reviews></Reviews>

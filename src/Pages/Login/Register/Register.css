@@ -1,0 +1,9 @@
+.register{
+    background-image: url("https://i.ibb.co/vdzHspd/menu-3-2-2000x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5% 10% 10% 10%;
+}
+.success {
+    margin-bottom: 10%;
+}

@@ -1,0 +1,40 @@
+.login{
+    background-image: url("https://i.ibb.co/H4VWFFx/blog-12-grande.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5% 10% 10% 10%;
+}
+.login-form h1{
+    color: cyan;
+}
+.login-form{
+    background-color: rgba(13, 13, 53, 0.74);
+    padding: 5%;
+    margin: 10%;
+    border-radius: 15px;
+}
+.login-form h6{
+    color: white;
+}
+.login-form p{
+    color: white;
+}
+.input input, textarea{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    width: 80%;
+    box-shadow: 5px 5px 10px rgba(139, 138, 138, 0.644);
+    background-color: rgba(229, 226, 226, 0.651);
+}
+.login-btn{
+    text-decoration: none;
+    margin: 2%;
+    padding: 2px 10px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: cyan;
+}
