@@ -3,9 +3,10 @@ import { Row } from "react-bootstrap";
 import Banar from "../Banar/Banar";
 import HomeProducts from "../HomeProducts/HomeProducts";
 import Reason from "../Reason/Reason";
-import Review from "../Review/Review";
 import Reviews from "../Reviews/Reviews";
+import Header from "../../Shared/Header/Header"
 import "./Home.css";
+import Footer from "../../Shared/Footer/Footer";
 
 const Home = () => {
     const [products, setProducts]= useState([]);
@@ -17,6 +18,7 @@ const Home = () => {
     },[])
   return (
     <div>
+      <Header></Header>
       <Banar></Banar>
 
       <section>
@@ -37,6 +39,7 @@ const Home = () => {
       </section>
       <Reason></Reason>
       <Reviews></Reviews>
+      <Footer></Footer>
     </div>
   );
 };

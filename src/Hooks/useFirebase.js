@@ -40,17 +40,9 @@ const useFirebase = () => {
   };
 
   /* Google Sign In */
-
   const googleSignIn = () => {
-    setIsloading(true);
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-        setIsloading(false);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    setIsloading(true)
+    return signInWithPopup(auth, googleProvider);
   };
 
   const logOut = () => {
@@ -85,7 +77,7 @@ const useFirebase = () => {
     logIn,
     user,
     error,
-    isloading,
+    setIsloading,
   };
 };
 

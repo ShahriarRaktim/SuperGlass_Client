@@ -6,13 +6,13 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
-import Footer from './Pages/Shared/Footer/Footer';
 import AuthProvider from './Context/AuthProvider';
-import Header from './Pages/Shared/Header/Header';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Login from './Pages/Login/Login/Login';
 import Details from './Pages/Purchase/Details/Details';
 import Register from './Pages/Login/Register/Register';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Products from './Pages/Products/Products/Products';
 
 
 function App() {
@@ -20,7 +20,6 @@ function App() {
     <AuthProvider>
       <div className="App">
       <Router>
-        <Header></Header>
         <Switch>
           <Route path="/home">
           <Home />
@@ -31,14 +30,19 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/products">
+            <Products></Products>
+          </Route>
           <Route path="/register">
             <Register></Register>
           </Route>
           <PrivateRoute path="/details/:productId">
             <Details></Details>
           </PrivateRoute>
+          <PrivateRoute path="/dashboard">
+              <Dashboard />
+            </PrivateRoute>
         </Switch>
-        <Footer></Footer>
     </Router>
     </div>
     </AuthProvider>

@@ -20,33 +20,15 @@ const Header = () => {
               <Nav.Link as={NavLink} to="/home" className="text-white">
                 HOME
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/services" className="text-white">
-                SERVICES
-              </Nav.Link>
-              <NavDropdown title="PAGES" id="navbarScrollingDropdown">
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/ourdoctors"
-                  className="text-dark"
-                >
-                  OUR DOCTORS
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/question"
-                  className="text-dark"
-                >
-                  HELP & FAQ{" "}
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link as={NavLink} to="/appointment" className="text-white">
-                APPOINTMENT
-              </Nav.Link>
+              
             </Nav>
                         {/* Conditional username and logout nav */}
             <Nav>
               {user.email ? (
                 <>
+                <Nav.Link as={NavLink} to="/dashboard" className="text-white">
+                DASHBOARD
+              </Nav.Link>
                   <Nav.Link href="#user" className="text-info">
                     {user.displayName || user.email}
                   </Nav.Link>
