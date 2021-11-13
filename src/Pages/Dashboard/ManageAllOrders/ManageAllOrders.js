@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
     const [products, setProducts]= useState([]);
     console.log("ok", products)
     useEffect(()=>{
-        fetch('http://localhost:5000/allorder')
+        fetch('https://dry-wave-86158.herokuapp.com/allorder')
         .then(res=>res.json())
         .then(data => setProducts(data))
     },[])

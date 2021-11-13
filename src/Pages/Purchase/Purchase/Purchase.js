@@ -15,7 +15,7 @@ const Purchase = ({ product }) => {
   const onSubmit = (data) => {
     data.tour = product;
 
-    fetch("http://localhost:5000/ordered", {
+    fetch("https://dry-wave-86158.herokuapp.com/ordered", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

@@ -7,7 +7,7 @@ const Review = () => {
     const {user} = useAuth();
   const onSubmit = (data) => {
       console.log(data)
-    fetch("http://localhost:5000/review", {
+    fetch("https://dry-wave-86158.herokuapp.com/review", {
     method: "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(data),

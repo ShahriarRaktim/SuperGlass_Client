@@ -16,7 +16,7 @@ const ManageAllOrder = ({product}) => {
       })
       .then((willDelete) => {
         if (willDelete) {
-          fetch(`http://localhost:5000/ordered/${id}`,{
+          fetch(`https://dry-wave-86158.herokuapp.com/ordered/${id}`,{
               method: "DELETE",
             })
             .then(res => res.json())
