@@ -6,25 +6,25 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-// import InboxIcon from "@mui/icons-material/MoveToInbox";
+// import MenuIcon from '@mui/icons-material/Menu';
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-// import MailIcon from "@mui/icons-material/Mail";
-// import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import { Button } from "@mui/material";
-import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import MyOrders from "../MyOrders/MyOrders";
 import Pay from "../Pay/Pay";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import Review from "../Review/Review";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import useAuth from "../../../Hooks/useAuth";
-
+import "./Dashboard.css";
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import AddProduct from "../AddProduct/AddProduct";
+import ManageProducts from "../ManageProducts/ManageProducts";
 
 const drawerWidth = 200;
 
@@ -41,33 +41,51 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <Link to={`${url}/myorder`}>
-        <Button color="inherit">My Order</Button>
+      {admin ? (
+        <Box>
+          <Link to={`${url}/manageallorders`} className="decoration">
+            <Button className="text-info">Manage All Orders</Button>
+          </Link>
+          <Link to={`${url}/manageproducts`} className="decoration">
+            <Button className="text-info">Manage Products</Button>
+          </Link>
+          <Link to={`${url}/addproduct`} className="decoration">
+            <Button className="text-info">Add Product</Button>
+          </Link>
+          <Link to={`${url}/makeAdmin`} className="decoration">
+            <Button className="text-info">Make Admin</Button>
+          </Link>
+        </Box>
+      ) : (
+        <Box>
+          <Link to={`${url}`} className="decoration">
+            <Button className="text-info">Dashboard</Button>
+          </Link>
+          <br />
+          <Link to={`${url}/myorder`} className="decoration">
+            <Button className="text-info ">My Order</Button>
+          </Link>
+          <br />
+          <Link to={`${url}/review`} className="decoration">
+            <Button className="text-info">Review</Button>
+          </Link>
+          <br />
+          <Link to={`${url}/pay`} className="decoration">
+            <Button className="text-info">Pay</Button>
+          </Link>
+        </Box>
+      )}
+      <Link to="/home" className="decoration" onClick={logOut}>
+        <Button className="text-info">LOGOUT</Button>
       </Link>
-      <Link to={`${url}/review`}>
-        <Button color="inherit">Review</Button>
+      <br />
+      <Link to="/" className="decoration">
+        <Button className="text-info">Back To Home</Button>
       </Link>
-      <Link to={`${url}/pay`}>
-        <Button color="inherit">Pay</Button>
-      </Link>
-      <Link to={`${url}`}>
-        <Button color="inherit">Dashboard</Button>
-      </Link>
-      <Link to="/home" className="text-info" onClick={logOut}>
-        LOGOUT
-      </Link>
-      <Link to="/">
-        <Button color="inherit">Back To Home</Button>
-      </Link>
-      {admin && <Box>
-                <Link to={`${url}/makeAdmin`}><Button color="inherit">Make Admin</Button></Link>
-            </Box>}
+
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        {["", "", "", ""].map((text, index) => (
           <ListItem button key={text}>
-            {/* <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon> */}
             <ListItemText primary={text} />
           </ListItem>
         ))}
@@ -165,9 +183,17 @@ function Dashboard(props) {
           </Route>
 
           <AdminRoute path={`${path}/makeadmin`}>
-                        <MakeAdmin></MakeAdmin>
-                    </AdminRoute>
-                    
+            <MakeAdmin></MakeAdmin>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageallorders`}>
+            <ManageAllOrders></ManageAllOrders>
+          </AdminRoute>
+          <AdminRoute path={`${path}/addproduct`}>
+            <AddProduct></AddProduct>
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageproducts`}>
+            <ManageProducts></ManageProducts>
+          </AdminRoute>
         </Switch>
       </Box>
     </Box>
