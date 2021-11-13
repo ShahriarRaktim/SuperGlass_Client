@@ -38,12 +38,12 @@ const ManageProduct = ({product}) => {
     }
   return (
     <Col    >
-      <Card className="m-3 card">
+      <Card className="m-3 card order">
         <Card.Img variant="top" src={img} />
         <Card.Body>
           <Card.Title className="name">{name}</Card.Title>
           <Card.Text>{summary}</Card.Text>
-          <button onClick={()=>deleteHandle(product._id)} className="contact">Delete</button>
+          <button onClick={()=>deleteHandle(product._id)} className="contact delete">Delete</button>
         </Card.Body>
       </Card>
     </Col>

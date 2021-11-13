@@ -1,0 +1,17 @@
+.pending{
+    color: gold;
+}
+.delete{
+    color: red;
+    margin-right: 5%;
+}
+.approve{
+    color: rgb(3, 153, 3);
+    margin-left: 5%;
+}
+.order:hover{
+    background-color: white;
+}
+.order{
+    box-shadow: 1px 1px 1px rgba(207, 203, 203, 0.911);
+}
