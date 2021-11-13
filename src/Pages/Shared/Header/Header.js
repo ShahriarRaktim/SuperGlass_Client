@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
@@ -19,6 +19,9 @@ const Header = () => {
             <Nav className="me-auto">
               <Nav.Link as={NavLink} to="/home" className="text-white">
                 HOME
+              </Nav.Link>
+              <Nav.Link as={NavLink} to="/products" className="text-white">
+                PRODUCTS
               </Nav.Link>
               
             </Nav>

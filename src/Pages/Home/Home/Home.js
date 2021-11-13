@@ -37,6 +37,15 @@ const Home = () => {
           ))}
         </Row>
       </section>
+      <div className="services">
+          <h1>SuperGlass</h1>
+          <h2>Why Our Glass</h2>
+          <p>
+            As you continue to keep tabs on the <span>SuperGlass</span>{" "}
+            industry, don’t forget to prioritize the deep-seated passion you’ve
+            been feeling to propel your career forward.
+          </p>
+        </div>
       <Reason></Reason>
       <Reviews></Reviews>
       <Footer></Footer>

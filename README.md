@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# SuperGlass
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Just Visit my website to get your best Glass with [SuperGlass](https://superglass-b99fc.web.app/home).
 
-## Available Scripts
+## Quality
 
-In the project directory, you can run:
+We have a entertainment boy who practices medicine, which is concerned with promoting, maintaining or restoring health through the study, diagnosis, prognosis and treatment of disease, injury, and other physical and mental impairments.
 
-### `yarn start`
+## Delevery
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+We offer a range of flexible and customizable maintenance options. Enroll today and save! Flexible Coverage Personalized for Your Operation. No More Surprise Maintenance Costs
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Exprience
 
-### `yarn test`
+Security means safety, as well as the measures taken to be safe or protected. In order to provide adequate security for the parade, town officials often hire extra guards. ... In the financial world, a stock or bond is also called a security.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Trust
 
-### `yarn build`
+A low-cost producer is a company that uses economies of scale to provide goods or services at a low cost. These goods and services are usually consumer staples which are in high demand such as household items, food, and beverages.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Friendly 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Friendly, describes people who are kind, caring, and make you feel comfortable. You might be new to town, but the people are so friendly that you'll soon feel right at home. The noun friend is at the root of the adjective friendly. When you're friendly, you treat everyone like a friend 

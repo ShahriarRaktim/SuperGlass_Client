@@ -11,10 +11,10 @@ const Reviews = () => {
         .then(data => setProducts(data))
     },[])
     return (
-        <section>
+        <section className="mb-5">
         <div className="services">
           <h1>SuperGlass</h1>
-          <h2>Our Best Collection</h2>
+          <h2>Some Review Here</h2>
           <p>
             As you continue to keep tabs on the <span>SuperGlass</span>{" "}
             industry, don’t forget to prioritize the deep-seated passion you’ve

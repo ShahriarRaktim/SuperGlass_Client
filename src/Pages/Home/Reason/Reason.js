@@ -60,7 +60,7 @@ const Reason = () => {
               </div>
             </div>
           </div>
-          <NavLink to="/ourdoctors" className="contact">
+          <NavLink to="/" className="contact">
             Contact Us <i class="fas fa-arrow-alt-circle-right"></i>
           </NavLink>
         </div>
