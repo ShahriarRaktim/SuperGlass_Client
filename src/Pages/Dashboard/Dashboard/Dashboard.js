@@ -172,13 +172,13 @@ function Dashboard(props) {
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
           </Route>
-          <Route exact path={`${path}/myorder`}>
+          <Route  path={`${path}/myorder`}>
             <MyOrders></MyOrders>
           </Route>
-          <Route exact path={`${path}/pay`}>
+          <Route  path={`${path}/pay`}>
             <Pay></Pay>
           </Route>
-          <Route exact path={`${path}/review`}>
+          <Route  path={`${path}/review`}>
             <Review></Review>
           </Route>
 

@@ -1,12 +1,14 @@
-import { CircularProgress } from '@mui/material';
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Route, Redirect } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
 
 const AdminRoute = ({ children, ...rest }) => {
-    const { user, admin, isLoading } = useAuth();
-    if (isLoading) { return <CircularProgress /> }
+    const { user, admin, isloading } = useAuth();
+    if(isloading){
+        return <Spinner animation="border" />
+    }
     return (
         <Route
             {...rest}

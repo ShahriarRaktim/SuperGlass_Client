@@ -1,23 +1,40 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import swal from "sweetalert"
 
 const ManageAllOrder = ({product}) => {
     const { name, summary, img, _id } = product.tour;
     const {username, useremail} = product;
 
     const deleteHandle =(id)=>{
-            fetch(`http://localhost:5000/ordered/${id}`,{
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          fetch(`http://localhost:5000/ordered/${id}`,{
               method: "DELETE",
             })
             .then(res => res.json())
             .then(result =>{
                 console.log(result)
               if(result.deletedCount===1){
-                
                 alert('Successfully Deleted !')
                 window.location.reload();
               }
             })
+          // swal("Poof! Your imaginary file has been deleted!", {
+          //   icon: "success",
+          // });
+        } else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+            
           
     }
   return (

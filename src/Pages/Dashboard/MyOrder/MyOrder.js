@@ -1,13 +1,21 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import swal from "sweetalert"
 
 const MyOrder = ({product}) => {
     const { name, summary, img,} = product.tour;
 
     const deleteHandle =(id)=>{
-        console.log(id)
-            fetch(`http://localhost:5000/ordered/${id}`,{
+      swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this imaginary file!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          fetch(`http://localhost:5000/ordered/${id}`,{
               method: "DELETE",
             })
             .then(res => res.json())
@@ -19,6 +27,14 @@ const MyOrder = ({product}) => {
                 window.location.reload();
               }
             })
+          // swal("Poof! Your imaginary file has been deleted!", {
+          //   icon: "success",
+          // });
+        } else {
+          swal("Your imaginary file is safe!");
+        }
+      });
+            
           
     }
   return (
